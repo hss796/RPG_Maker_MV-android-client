@@ -1,0 +1,7 @@
+ext {
+    minSdkVersion = 24
+    compileSdkVersion = 34
+    targetSdkVersion = 34
+    androidxWebkitVersion = '1.11.0'
+    cordovaAndroidVersion = '13.0.0'
+}

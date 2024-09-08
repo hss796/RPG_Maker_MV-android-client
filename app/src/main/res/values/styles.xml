@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 基础应用主题. -->
+    <style name="AppTheme" >
+        <item name="colorPrimary">@color/color_primary_dark</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+    <style name="AppTheme.NoActionBarLaunch" parent="Theme.SplashScreen">
+        <item name="android:windowBackground">@drawable/splash_black</item>
+    </style>
+    <!-- 退出提醒主题颜色设置 -->
+    <style name="CustomAlertDialogStyle" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <!-- 设置背景颜色为白色 -->
+        <item name="android:background">@android:color/white</item>
+        <!-- 设置文本颜色为黑色 -->
+        <item name="android:textColor">@android:color/black</item>
+        <!-- 设置标题文本颜色为黑色（如果需要） -->
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <!-- 设置按钮文本颜色为黑色（如果需要） -->
+        <item name="android:textColorSecondary">@android:color/black</item>
+    </style>
+</resources>

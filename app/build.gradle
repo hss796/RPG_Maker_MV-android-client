@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+
+android {
+    /**
+     * 高级配置
+     */
+    def BACK_BUTTON_QUITS = true // 使用后退按钮退出应用程序？
+    def SHOW_FPS = false // 显示 FPS 监视器?
+    namespace 'jp.hbox.ImoutoFantasy' // 定义命名空间
+    buildFeatures { buildConfig true } // 生成包含构建配置信息的 BuildConfig 类
+
+    // Android 14+ "U" API 34
+    def ANDROID_SDK_TARGET = 34
+
+    defaultConfig {
+        /**
+         * 项目识别
+         */
+        applicationId "jp.hbox.ImoutoFantasy" // 应用ID
+        versionCode 1 // 将其设置为更高的数字以进行游戏更新
+        versionName "1.2.0" // 这是玩家看到的版本
+        minSdkVersion 24 // 最低SDK版本
+        compileSdk ANDROID_SDK_TARGET
+        targetSdkVersion ANDROID_SDK_TARGET
+        buildConfigField "boolean", "BOOTSTRAP_INTERFACE", "true"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true // R8代码混淆
+            shrinkResources true // 启用资源缩减，去除未使用的资源文件
+            // 指定混淆规则文件
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_22
+        targetCompatibility JavaVersion.VERSION_22
+    }
+    buildTypes.each { buildType ->
+        buildType.buildConfigField "boolean", "BACK_BUTTON_QUITS", String.valueOf(BACK_BUTTON_QUITS)
+        buildType.buildConfigField "boolean", "SHOW_FPS", String.valueOf(SHOW_FPS)
+    }
+}
+
+dependencies {
+    // 本地 jar 文件（如果有其他依赖）
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    // Capacitor 相关依赖
+    implementation project(':capacitor-android')
+    implementation project(':capacitor-cordova-android-plugins')
+
+    // Kotlin 依赖（如果需要）
+    implementation platform('org.jetbrains.kotlin:kotlin-bom:2.0.20')
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
+}

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+
+    <string name="package_name">jp.hbox.ImoutoFantasy</string>
+    <string name="custom_url_scheme">jp.hbox.ImoutoFantasy</string>
+        <!-- 项目名称 -->
+    <string name="app_name">妹相随：黑白世界的缤纷冒险</string>
+    <string name="title_activity_main">妹相随：黑白世界的缤纷冒险</string>
+    <!-- 网页链接 -->
+    <string name="app_scheme">https</string>
+    <string name="app_host">jp.hbox</string>
+
+    <!-- 退出提醒 -->
+    <string-array name="quit_message">
+        <!-- 删除所有项目（空字符串数组）以禁用退出警告 -->
+        <item>您确定要退出  $1  吗？</item>
+        <item>                   </item>
+        <item>未保存的进度将会丢失。 </item>
+    </string-array>
+</resources>

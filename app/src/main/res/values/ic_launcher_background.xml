@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 主题颜色 -->
+    <color name="color_primary">#424242</color>
+    <color name="color_primary_dark">#212121</color>
+    <color name="color_accent">#009688</color>
+    <!-- 图标颜色 -->
+    <color name="ic_launcher_background">#000000</color>
+</resources>

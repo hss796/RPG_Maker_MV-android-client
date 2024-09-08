@@ -1,0 +1,10 @@
+{
+	"appId": "jp.hbox.ImoutoFantasy",
+	"appName": "妹相随：黑白世界的缤纷冒险",
+	"webDir": "www",
+	"plugins": {
+		"SplashScreen": {
+			"launchShowDuration": 0
+		}
+	}
+}
